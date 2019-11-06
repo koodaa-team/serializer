@@ -312,7 +312,7 @@ def dump_object(value, args):
     """
     #print value, args
     for class_ in OBJECT_DUMPERS:
-        if isinstance(class_, basestring):
+        if isinstance(class_, str):
             if class_ == value.__class__.__name__:
                 value = OBJECT_DUMPERS[class_](value, args)
         elif isinstance(value, class_):
